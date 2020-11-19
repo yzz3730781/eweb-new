@@ -1,0 +1,127 @@
+@import '~antd/lib/style/themes/default.less';
+
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  overflow: hidden;
+  background-image: url("../assets/login/bg@3.png");
+  background-size: 100%;
+}
+
+.lang {
+  text-align: right;
+  width: 100%;
+  height: 40px;
+  line-height: 44px;
+  :global(.ant-dropdown-trigger) {
+    margin-right: 24px;
+  }
+}
+
+@media (min-width: @screen-md-min) {
+  .container {
+    //background-image: url('https://gw.alipayobjects.com/zos/rmsportal/TVYTbAXWheQpRcWDaDMu.svg');
+    //background-repeat: no-repeat;
+    //background-position: center 110px;
+    //background-size: 100%;
+  }
+
+  .content {
+    padding: 32px 0 24px 0;
+  }
+}
+
+.top {
+  text-align: center;
+}
+
+.header {
+  position: fixed;
+  top: 10pt;
+  left: 13pt;
+  height: 44px;
+  line-height: 44px;
+  a {
+    text-decoration: none;
+  }
+}
+
+.logo {
+  height: 21px;
+  vertical-align: top;
+  margin-right: 16px;
+}
+
+.title {
+  font-size: 33px;
+  color: @heading-color;
+  font-family: 'Microsoft YaHei', Avenir, 'Helvetica Neue', Arial, Helvetica, sans-serif;
+  font-weight: 600;
+  position: relative;
+  top: 2px;
+}
+
+.desc {
+  font-size: @font-size-base;
+  color: @text-color-secondary;
+  margin-top: 12px;
+  margin-bottom: 40px;
+}
+
+.parallax > use{
+  animation:move-forever 12s linear infinite;
+  &:nth-child(1){animation-delay:-2s;}
+  &:nth-child(2){animation-delay:-2s; animation-duration:5s}
+  &:nth-child(3){animation-delay:-4s; animation-duration:3s}
+}
+
+@keyframes move-forever{
+  0%{transform: translate(-90px , 0%)}
+  100%{transform: translate(85px , 0%)}
+}
+
+.content {
+  position: relative;
+  margin: auto 0;
+}
+
+.childcontainer{
+  background: white;
+  border-radius: 8px;
+  position: absolute;
+  right: 10%;
+  top: 50%;
+  transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+}
+
+.bgstyle{
+  left: 10%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  background-size: 100%;
+}
+
+// @media screen and (min-width: @screen-lg) {
+.bgitem{
+  .bgstyle;
+  width: 711px;
+  height: 456px;
+  background-image: url("../assets/login/bgitem@3.png");
+}
+// }
+
+// @media screen and (max-width: @screen-md) {
+//   .bgitem{
+//     .bgstyle;
+//     width: 237px;
+//     height: 152px;
+//     background-image: url("../assets/login/bgitem@1.png");
+//   }
+// }
